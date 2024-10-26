@@ -1,62 +1,99 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/BNTWXiY_)
-# Tugas Week 7 Nodejs
+Saya akan membantu membuat README.md yang terstruktur dengan daftar isi dan pembatas horizontal (hr) dari konten yang Anda berikan.
 
-### Deskripsi Tugas
-Sebagai seorang Nodejs developer kamu diminta untuk membuat sebuah aplikasi berbasis CLI yang digunakan untuk keperluan manajemen file system.Aplikasi ini akan digunakan untuk menata ulang dan merapikan sebuah folder.Aplikasi ini mempunyai beberapa fitur utama diantaranya : 
 
-* fitur untuk membaca sebuah isi folder dan menampilkan detail isi folder tersebut berurutan sesuai tanggal pembuatanya.
-* fitur untuk membuat sebuah folder baru.
-* fitur untuk membuat sebuah file baru.
-* fitur untuk merapikan file kedalam folder berdasarkan ekstensi.
-* fitur untuk membaca isi dari sebuah file hanya mendukung untuk membaca sebuah text bukan gambar
 
-### Daftar Perintah / Command Line
-berikut adalah ketentuan untuk menjalankan perintah.Silahkan edit pada bagian `package.json`
+# File Manager CLI 📁🔧
 
-* **make-folder** : digunakan untuk membuat folder
-* **make-file** : digunakan untuk membuat sebuah file
-* **ext-sorter** : merapikan sebuah folder sesuai dengan extensi.
-* **read-folder** : digunakan untuk membaca sebuah folder.
-* **read-file** : digunakan untuk membaca isi dari sebuah file.
+file-manager-cli adalah aplikasi Command-Line Interface (CLI) untuk manajemen file dan folder, menyediakan fitur untuk membuat folder, membuat file, mengurutkan file berdasarkan ekstensi, membaca isi folder, dan membaca isi file teks.
 
-semua perintah dijalankan dengan menggunakan perintah `npm run ${nama_command}`
+---
 
-### Ketentuan Penilaian 
-* Untuk fitur `make-folder` program dapat membuat sebuah folder 
-* Ketika menjalankan `make-file` program dapat membuat sebuah file baru berdasarkan extensi yang ingin dibuat
-* Disediakan sebuah folder bernama `unorganize_folder` didalam folder tersebut terdapat beberapa contoh extensi file yang berbeda, rapikan file tersebut dan bagi kedalam beberapa folder diluar folder `unorganize_folder`.ketika command `ext-sorter` dijalankan semua file yang ada pada folder `unorganize_folder` akan berpindah kedalam folder yang sesuai dengan extensi nya seperti folder `image` berisi sebuah gambar dan folder `text` berisi sebuah file text.
-* Ketika command `read-folder` dijalankan maka akan muncul semua list file yang ada pada folder yang dipilih.Misalnya kalian ingin mengetahui isi file yang ada pada folder `image` silahkan jalankan perintah `read-folder`.untuk ketentuan outputnya sebagai berikut :
+## 📑 Daftar Isi
+- [Fitur](#-fitur)
+- [Instalasi](#️-instalasi)
+- [Penggunaan](#-penggunaan)
+  - [Membuat Folder](#1-membuat-folder)
+  - [Membuat File](#2-membuat-file)
+  - [Pengurutan Berdasarkan Ekstensi](#3-pengurutan-berdasarkan-ekstensi)
+  - [Membaca Isi Folder](#4-membaca-isi-folder)
+  - [Membaca Isi File](#5-membaca-isi-file)
+- [Alternatif Penggunaan dengan npm run](#-alternatif-penggunaan-dengan-npm-run)
 
-```json
-// menampilkan isi dari folder nama_folder
-berhasil menampilkan isi dari folder coba :
-[ 
-    {
-        namaFile : "gambar.jpg",
-        extensi : "jpg",
-        jenisFile : "gambar",
-        tanggalDibuat : 2024-10-12
-        ukuranFile : "1mb"
-    },
-    {
-        namaFile : "text.txt",
-        extensi : "txt",
-        jenisFile : "text",
-        tanggalDibuat : 2024-10-12
-        ukuranFile : "10kb"
-    }
+---
 
-]
+## ✨ Fitur
+- **Pembuatan Folder**: Membuat folder baru dengan nama yang diinput pengguna.
+- **Pembuatan File**: Membuat file baru dengan nama dan isi yang diinput pengguna.
+- **Pengurutan Berdasarkan Ekstensi**: Mengurutkan file dalam folder yang tidak terorganisir ke dalam folder target sesuai dengan ekstensi file.
+- **Pembacaan Isi Folder**: Membaca dan menampilkan detail file di dalam folder, termasuk tipe file, ukuran, dan tanggal pembuatan.
+- **Pembacaan Isi File**: Membaca isi dari file teks.
+
+---
+
+## ⚙️ Instalasi
+Untuk menjalankan aplikasi ini, pastikan Anda sudah memiliki Node.js versi terbaru. Lalu, ikuti langkah-langkah berikut:
+
+1. Kloning repository:
+```bash
+git clone https://github.com/username/file-manager-cli.git
 ```
 
-* Ketika `read-file` dijalankan maka akan muncul isi dari file tersebut sebagai berikut : 
-```txt
-isi dari file cerpen.txt 
-
-Di suatu desa kecil yang dikelilingi oleh hutan lebat, hiduplah seorang pemuda bernama Arman yang memiliki rasa ingin tahu tak terbatas tentang alam. Setiap pagi, ia menjelajah ke dalam hutan untuk mencari tanaman langka dan hewan-hewan yang jarang terlihat. Suatu hari, di dalam keheningan hutan, Arman menemukan sebuah gua tersembunyi yang belum pernah ia lihat sebelumnya. Dengan hati-hati, ia masuk ke dalam dan terkejut saat melihat dinding-dinding gua dipenuhi dengan lukisan kuno yang menggambarkan makhluk-makhluk aneh dan kejadian misterius. Ia menyadari bahwa gua ini mungkin menyimpan rahasia masa lalu yang hilang, dan sejak saat itu, hidup Arman berubah menjadi petualangan untuk mengungkap makna dari setiap gambar yang ia temukan.
- 
+2. Masuk ke direktori proyek dan install dependencies:
+```bash
+cd file-manager-cli
+npm install
 ```
 
-### Ketentuan Pengumpulan 
-* buatlah sebuah branch baru bernama `result` untuk menampung semua output dan hasil kerja kalian beserta screenshot hasil dari program 
-* untuk branch `master` digunakan untuk menyimpan hasil pengerjaan tanpa menyimpan output atau hasil program yang sudah berhasil dijalankan.
+3. Instal secara global (opsional):
+```bash
+npm install -g .
+```
+Untuk menggunakan file-manager-cli di seluruh sistem Anda, install secara global.
+
+---
+
+## 🚀 Penggunaan
+Setelah diinstal, jalankan aplikasi dengan perintah `file-manager-cli` diikuti salah satu perintah berikut:
+
+### 1. Membuat Folder
+```bash
+file-manager-cli make-folder
+```
+**Catatan**: Ikuti prompt untuk memasukkan nama folder yang akan dibuat.
+
+### 2. Membuat File
+```bash
+file-manager-cli make-file
+```
+**Catatan**: Ikuti prompt untuk memasukkan nama file (dengan ekstensi) dan isi file tersebut.
+
+### 3. Pengurutan Berdasarkan Ekstensi
+```bash
+file-manager-cli ext-sorter
+```
+**Catatan**: Masukkan path folder sumber (misalnya, unorganized_folder), dan aplikasi akan memindahkan file berdasarkan ekstensi ke dalam folder images, texts, atau others.
+
+### 4. Membaca Isi Folder
+```bash
+file-manager-cli read-folder
+```
+**Catatan**: Masukkan nama folder yang ingin dibaca, dan aplikasi akan menampilkan informasi file di dalam folder, seperti nama file, ekstensi, jenis, ukuran, dan tanggal pembuatan.
+
+### 5. Membaca Isi File
+```bash
+file-manager-cli read-file
+```
+**Catatan**: Masukkan nama file yang ingin dibaca, dan aplikasi akan menampilkan isi file tersebut.
+
+---
+
+## 🔄 Alternatif Penggunaan dengan npm run
+Jika aplikasi belum diinstal secara global, Anda bisa menggunakan perintah berikut di dalam direktori proyek:
+
+```bash
+npm run make-folder
+npm run make-file
+npm run ext-sorter
+npm run read-folder
+npm run read-file
+```
