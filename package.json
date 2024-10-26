@@ -1,17 +1,20 @@
 {
-  "name": "tugas_week_7_nodejs",
+  "name": "file-manager-cli",
   "version": "1.0.0",
-  "description": "",
+  "description": "A CLI application for file management to create folders, files, sort files by extension, and read file contents.",
   "main": "index.js",
+  "bin": {
+    "file-manager-cli": "./index.js"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "make-folder" : "node index.js make-folder",
-   "make-file": "node index.js make-file",
+    "make-folder": "node index.js make-folder",
+    "make-file": "node index.js make-file",
     "ext-sorter": "node index.js ext-sorter",
     "read-folder": "node index.js read-folder",
     "read-file": "node index.js read-file"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["file", "management", "cli"],
+  "author": "Hafiz",
   "license": "ISC"
 }
