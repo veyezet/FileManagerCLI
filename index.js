@@ -1,4 +1,3 @@
-// index.js
 const app = require("./app");
 const args = process.argv.slice(2);
 const command = args[0];
@@ -20,5 +19,5 @@ switch (command) {
         app.readFile();
         break;
     default:
-        throw Error("Invalid command");
+        console.error("Error: Perintah tidak valid. Gunakan 'make-folder', 'make-file', 'ext-sorter', 'read-folder', atau 'read-file'.");
 }
