@@ -1,7 +1,3 @@
-Saya akan membantu membuat README.md yang terstruktur dengan daftar isi dan pembatas horizontal (hr) dari konten yang Anda berikan.
-
-
-
 # File Manager CLI 📁🔧
 
 file-manager-cli adalah aplikasi Command-Line Interface (CLI) untuk manajemen file dan folder, menyediakan fitur untuk membuat folder, membuat file, mengurutkan file berdasarkan ekstensi, membaca isi folder, dan membaca isi file teks.
